@@ -44,7 +44,7 @@ To run this project, you must provide your own API key from Google AI Studio.
 
 1.  **Clone the repository:**
     ```bash
-    git clone [https://github.com/your-username/finding-forester.git](https://github.com/your-username/finding-forester.git)
+    git clone https://github.com/YOUR_USERNAME/finding-forester.git
     cd finding-forester
     ```
 
