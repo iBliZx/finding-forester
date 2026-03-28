@@ -140,7 +140,7 @@ export default function Home() {
   };
 
   const queryGemini = async (promptText) => {
-    if (!GEMINI_API_KEY || GEMINI_API_KEY === "XXXXXXXX") {
+    if (!GEMINI_API_KEY || GEMINI_API_KEY === "INSERT_KEY_HERE") {
       throw new Error("Gemini API key is not configured.");
     }
 
