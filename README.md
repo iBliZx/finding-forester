@@ -1,70 +1,71 @@
-# Getting Started with Create React App
+# Finding Forester
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+**Finding Forester** is an AI-powered environmental impact assessment tool developed for **Hack PSU 2026**. It allows users to select specific forest regions on an interactive map and generates professional-grade ecological reports detailing the consequences of deforestation and localized conservation recovery plans.
 
-## Available Scripts
+---
 
-In the project directory, you can run:
+## Key Features
 
-### `npm start`
+* **Interactive Area Selection:** Draw polygons on a global map to select specific forested regions.
+* **Geospatial Intelligence:** Automatically detects coordinates, calculates area in hectares, and identifies if the selection is over land, water, or near urban centers.
+* **AI-Driven Ecology Reports:** Utilizes **Gemini 2.5 Flash** to provide deep-dive assessments:
+    * **Environmental Changes:** Quantified impacts on biodiversity, water systems, and soil.
+    * **Flora & Fauna Analysis:** Identification of native species (scientific names) and specific survival risks.
+    * **Human Health Impact:** Analysis of how local populations depend on the forest for water, medicine, and food.
+    * **Climate Future:** 10-50 year outlooks on regional climate resilience.
+* **Actionable Conservation Plans:** Step-by-step restoration guides with localized tree species and estimated costs.
+* **Data Persistence:** Uses a mix of `localStorage` and Cookies to save assessments and map selections across sessions.
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+---
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+## Tech Stack
 
-### `npm test`
+* **Frontend:** React, Next.js, Tailwind CSS
+* **Animation:** Framer Motion, Lucide React (Icons)
+* **AI/LLM:** Google Generative AI SDK (Gemini 2.5 Flash)
+* **Maps & Geocoding:** Leaflet, OpenStreetMap Nominatim API, BigDataCloud API
+* **UI Components:** Radix UI / Shadcn UI
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+---
 
-### `npm run build`
+## 🔑 Setting Up Your Gemini API Key
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+To run this project, you must provide your own API key from Google AI Studio.
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+1.  Go to [Google AI Studio](https://aistudio.google.com/).
+2.  Create a new API Key.
+3.  **Local Setup:** For development, you can replace the `GEMINI_API_KEY` string in `src/pages/Home.js`:
+    ```javascript
+    const GEMINI_API_KEY = "YOUR_ACTUAL_API_KEY_HERE";
+    ```
+4.  **Production (Recommended):**
+    Create a `.env.local` file in the root directory and add:
+    ```env
+    NEXT_PUBLIC_GEMINI_API_KEY=your_api_key_here
+    ```
+    Then, update the code to reference `process.env.NEXT_PUBLIC_GEMINI_API_KEY`.
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+---
 
-### `npm run eject`
+## Installation
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+1.  **Clone the repository:**
+    ```bash
+    git clone [https://github.com/your-username/finding-forester.git](https://github.com/your-username/finding-forester.git)
+    cd finding-forester
+    ```
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+2.  **Install dependencies:**
+    ```bash
+    npm install
+    ```
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+3.  **Run the development server:**
+    ```bash
+    npm run dev
+    ```
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+4.  **Access the app:**
+    Open [http://localhost:3000](http://localhost:3000) in your browser.
 
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+---
