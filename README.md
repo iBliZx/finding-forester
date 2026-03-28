@@ -35,6 +35,7 @@ To run this project, you must provide your own API key from Google AI Studio.
 1.  Go to [Google AI Studio](https://aistudio.google.com/).
 2.  Create a new API Key.
 3.  **Local Setup:** For development, you can replace the `GEMINI_API_KEY` string in `src/pages/Home.js`:
+
     ```javascript
     const GEMINI_API_KEY = "INSERT_KEY_HERE";
     ```
