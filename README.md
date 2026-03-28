@@ -28,7 +28,7 @@
 
 ---
 
-## 🔑 Setting Up Your Gemini API Key
+## Setting Up Your Gemini API Key
 
 To run this project, you must provide your own API key from Google AI Studio.
 
@@ -36,16 +36,8 @@ To run this project, you must provide your own API key from Google AI Studio.
 2.  Create a new API Key.
 3.  **Local Setup:** For development, you can replace the `GEMINI_API_KEY` string in `src/pages/Home.js`:
     ```javascript
-    const GEMINI_API_KEY = "YOUR_ACTUAL_API_KEY_HERE";
+    const GEMINI_API_KEY = "INSERT_KEY_HERE";
     ```
-4.  **Production (Recommended):**
-    Create a `.env.local` file in the root directory and add:
-    ```env
-    NEXT_PUBLIC_GEMINI_API_KEY=your_api_key_here
-    ```
-    Then, update the code to reference `process.env.NEXT_PUBLIC_GEMINI_API_KEY`.
-
----
 
 ## Installation
 
